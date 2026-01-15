@@ -35,3 +35,46 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_sugp2")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="ControlPanel" type="PanelContainer" parent="UI"]
+offset_left = -528.0
+offset_top = -173.99998
+offset_right = -414.0
+offset_bottom = -45.999985
+scale = Vector2(2.2014053, 3.119997)
+
+[node name="VBox" type="VBoxContainer" parent="UI/ControlPanel"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="UI/ControlPanel/VBox"]
+layout_mode = 2
+text = "Physics Tuning"
+
+[node name="Mass" type="HBoxContainer" parent="UI/ControlPanel/VBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UI/ControlPanel/VBox/Mass"]
+layout_mode = 2
+
+[node name="SpinBox" type="SpinBox" parent="UI/ControlPanel/VBox/Mass"]
+layout_mode = 2
+
+[node name="Gravity" type="HBoxContainer" parent="UI/ControlPanel/VBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UI/ControlPanel/VBox/Gravity"]
+layout_mode = 2
+
+[node name="SpinBox" type="SpinBox" parent="UI/ControlPanel/VBox/Gravity"]
+layout_mode = 2
+
+[node name="Bounce" type="HBoxContainer" parent="UI/ControlPanel/VBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UI/ControlPanel/VBox/Bounce"]
+layout_mode = 2
+
+[node name="SpinBox" type="SpinBox" parent="UI/ControlPanel/VBox/Bounce"]
+layout_mode = 2

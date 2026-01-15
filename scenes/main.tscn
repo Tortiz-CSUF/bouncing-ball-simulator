@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://byvuhoo1y8si5"]
+
+[ext_resource type="Texture2D" uid="uid://jo8crurc127o" path="res://assets/sprites/Red-Ball-PNG.png" id="1_0wfyh"]
+[ext_resource type="Texture2D" uid="uid://0jealvqjf5cu" path="res://assets/sprites/2dplatform.png" id="2_sugp2"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Ball" type="RigidBody2D" parent="."]
+position = Vector2(0, -228)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Ball"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_0wfyh")
+
+[node name="Platform" type="StaticBody2D" parent="."]
+position = Vector2(33, 217)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform"]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_sugp2")
+
+[node name="Camera2D" type="Camera2D" parent="."]

@@ -1,14 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://byvuhoo1y8si5"]
+[gd_scene load_steps=6 format=3 uid="uid://byvuhoo1y8si5"]
 
 [ext_resource type="Texture2D" uid="uid://jo8crurc127o" path="res://assets/sprites/Red-Ball-PNG.png" id="1_0wfyh"]
+[ext_resource type="PhysicsMaterial" uid="uid://dene3uj6wqvkn" path="res://Material/BallMaterial.tres" id="1_sugp2"]
 [ext_resource type="Texture2D" uid="uid://0jealvqjf5cu" path="res://assets/sprites/2dplatform.png" id="2_sugp2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jyhfs"]
+radius = 31.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tbgi4"]
+size = Vector2(390, 70)
 
 [node name="Main" type="Node2D"]
 
 [node name="Ball" type="RigidBody2D" parent="."]
 position = Vector2(0, -228)
+physics_material_override = ExtResource("1_sugp2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+shape = SubResource("CircleShape2D_jyhfs")
 
 [node name="Sprite2D" type="Sprite2D" parent="Ball"]
 scale = Vector2(0.1, 0.1)
@@ -18,6 +27,8 @@ texture = ExtResource("1_0wfyh")
 position = Vector2(33, 217)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
+position = Vector2(-26, 2)
+shape = SubResource("RectangleShape2D_tbgi4")
 
 [node name="Sprite2D" type="Sprite2D" parent="Platform"]
 scale = Vector2(0.3, 0.3)

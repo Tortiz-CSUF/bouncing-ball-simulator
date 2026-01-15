@@ -39,10 +39,10 @@ texture = ExtResource("2_sugp2")
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="ControlPanel" type="PanelContainer" parent="UI"]
-offset_left = -527.0
-offset_top = -88.0
-offset_right = -379.0
-offset_bottom = 40.0
+offset_left = 53.0
+offset_top = 217.0
+offset_right = 201.0
+offset_bottom = 345.0
 scale = Vector2(1.7214054, 2.5716116)
 
 [node name="VBox" type="VBoxContainer" parent="UI/ControlPanel"]
